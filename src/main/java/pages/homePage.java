@@ -21,15 +21,20 @@ public class homePage {
     }
 
     public void checkImage() {
-        elementHelper.findElement();
-        driver.findElement(image).isDisplayed();
+        elementHelper.checkElement(image);
+        //elementHelper.findElement(image).isDisplayed();
+        //driver.findElement(image).isDisplayed();
     }
 
     public String getText() {
-        return driver.findElement(text).getText();
+        return elementHelper.getText(text);
+        //return elementHelper.findElement(text).getText();
+        //return driver.findElement(text).getText();
     }
 
     public void clickManButton() {
-        driver.findElement(manButton).click();
+        elementHelper.click(manButton);
+        //elementHelper.findElement(manButton).click();
+        // driver.findElement(manButton).click();
     }
 }
